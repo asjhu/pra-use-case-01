@@ -7,6 +7,7 @@
 #### Create a file called 4-jump-item-create.sh, then copy paste the script contents of "Deploy the Instances in EC2" \
 #### https://www.beyondtrust.com/docs/privileged-remote-access/how-to/integrations/api/use-cases.htm \
 #### Replace values with your PRA instance:
+```sh
 export BT_CLIENT_ID=XXX
 export BT_CLIENT_SECRET=XXX
 export BT_API_HOST=XXX
@@ -14,6 +15,7 @@ export BT_API_HOST=XXX
 JUMP_GROUP_ID=x
 JUMP_GROUP_TYPE=shared
 JUMPOINT_ID=x
+```
 
 #### Execute 1-create.sh to create EC2 hosts and Jump items
 #### Execute 2-destroy.sh to delete EC2 hosts
