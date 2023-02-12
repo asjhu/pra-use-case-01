@@ -2,7 +2,7 @@
 retrv1=$(btapi do vault/account/59/check-out)
 retrv2=$(echo "$retrv1" | jq '.password')
 retrv3=$(echo "$retrv1" | jq '.username')
-tee vars.tf <<EOF
+tee > /dev/null 2>&1 vars.tf <<EOF
   variable REGION {
     default = "us-west-1"
   }
@@ -18,7 +18,6 @@ EOF
 btapi do vault/account/59/check-in
 
 # Run terraform provisioning
-echo "rm -rf .terraform* `rm -rf .terraform*` `rm -f terraform*`"
 terraform init
 terraform apply -auto-approve
 
